@@ -5,7 +5,7 @@ using UnityEngine;
 public class pipeSpawnerScript : MonoBehaviour
 {
     public GameObject pipe;
-    public float spawRate = 2;
+    public float spawnRate = 2;
     private float timer = 0;
     public float hightOffset = 10;
 
@@ -18,8 +18,8 @@ public class pipeSpawnerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer < spawRate){
-            timer = timer = Time.deltaTime;
+        if (timer < spawnRate){
+            timer = timer + Time.deltaTime;
         }
         else
         {
@@ -31,8 +31,9 @@ public class pipeSpawnerScript : MonoBehaviour
     void spawnPipe()
     {
         float lowestPoint = transform.position.y - hightOffset;
-        float highesPoint = transform.position.x + hightOffset;
+        float highesPoint = transform.position.y + hightOffset;
 
-        Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highesPoint), 0), transform.rotation);
+        Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highesPoint)), transform.rotation);
+        //Instantiate(pipe, transform.position, transform.rotation);
     }
 }
