@@ -1013,8 +1013,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 2118319294}
-  flapStrength: 20
+  flapStrength: 15
   logic: {fileID: 0}
+  birdIsOn: 1
 --- !u!58 &2118319296
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1049,7 +1050,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.09, y: -0.54}
   serializedVersion: 2
-  m_Radius: 1.91
+  m_Radius: 1.7
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
